@@ -20,11 +20,7 @@
 
 import sys
 import socket
-try:
-    from urllib.parse import urlparse
-except ImportError:
-     from urlparse import urlparse
-
+import urllib.parse
 
 def help():
     print("httpclient.py [GET/POST] [URL]\n")

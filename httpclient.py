@@ -24,7 +24,7 @@ try:
     from urllib.parse import urlparse
 except ImportError:
      from urlparse import urlparse
-     
+
 
 def help():
     print("httpclient.py [GET/POST] [URL]\n")
@@ -135,7 +135,7 @@ class HTTPClient(object):
 
         body = self.get_body(response_data)
         code = self.get_code(response_data)
-        #print(body)
+        print(body)
         
         return HTTPResponse(code, body)
 
@@ -160,7 +160,7 @@ class HTTPClient(object):
 
         body = self.get_body(response_data)
         code = self.get_code(response_data)
-        #print(body)
+        print(body)
         return HTTPResponse(code, body)
 
     def command(self, url, command="GET", args=None):
